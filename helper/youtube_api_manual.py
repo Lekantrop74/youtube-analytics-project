@@ -35,14 +35,14 @@ printj(channel)
 получить данные по play-листам канала
 docs: https://developers.google.com/youtube/v3/docs/playlists/list
 '''
-playlists = youtube.playlists().list(channelId=channel_id,
-                                     part='contentDetails,snippet',
-                                     maxResults=50,
-                                     ).execute()
-# printj(playlists)
-for playlist in playlists['items']:
-    print(playlist)
-    print()
+# playlists = youtube.playlists().list(channelId=channel_id,
+#                                      part='contentDetails,snippet',
+#                                      maxResults=50,
+#                                      ).execute()
+# # printj(playlists)
+# for playlist in playlists['items']:
+#     print(playlist)
+#     print()
 
 
 '''
@@ -79,7 +79,7 @@ for video in video_response['items']:
     # YouTube video duration is in ISO 8601 format
     iso_8601_duration = video['contentDetails']['duration']
     duration = isodate.parse_duration(iso_8601_duration)
-    print(duration)
+    # print(duration)
 
 
 '''
