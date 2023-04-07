@@ -53,7 +53,7 @@ class Video:
 
 
 class PLVideo(Video):
-    def __init__(self, video_id, playlist_id):
+    def __init__(self, video_id : str, playlist_id : str):
         """
         Инициализирует экземпляр класса `PLVideo`.
 
@@ -72,4 +72,3 @@ class PLVideo(Video):
         self.views = None
         self.likes = None
         super()._get_video_data()
-
